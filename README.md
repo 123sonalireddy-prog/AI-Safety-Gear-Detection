@@ -1,6 +1,6 @@
 AI Safety Gear Detection System
 
-📌 Project Overview
+ Project Overview
 
 The AI Safety Gear Detection System is an AI-based workplace safety monitoring project designed to detect whether workers are wearing the required Personal Protective Equipment (PPE).
 
@@ -8,19 +8,18 @@ The system uses Python, YOLO, and OpenCV to detect safety equipment such as helm
 
 The main objective is to improve workplace safety by identifying missing safety gear and providing an immediate compliance status.
 
-🎯 Problem Statement
+Problem Statement
 
 In industrial environments, workers are required to wear appropriate safety equipment. Manual monitoring of PPE compliance can be difficult, time-consuming, and may not detect violations immediately.
 
 This project provides an automated approach to monitor PPE compliance using computer vision and object detection.
-
-💡 Proposed Solution
+ Proposed Solution
 
 The system captures an image or video frame through a camera and uses a YOLO-based object detection model to identify safety equipment.
 
 The detected PPE is then checked according to the requirements of the working area. The system determines whether the worker is compliant or whether any required safety gear is missing.
 
-⚙️ Main Features
+ Main Features
 
 - Helmet detection
 - Safety vest detection
@@ -33,7 +32,7 @@ The detected PPE is then checked according to the requirements of the working ar
 - Compliance status display
 - Alert mechanism for missing safety equipment
 
-🏭 Area-Based PPE Requirements
+ Area-Based PPE Requirements
 
 The system can apply different PPE requirements depending on the working area.
 
@@ -43,7 +42,7 @@ Maintenance Area| Helmet, Vest, Gloves
 Hot Rolling Area| Helmet, Vest, Gloves, Goggles
 Hazardous Area| Helmet, Vest, Gloves, Goggles
 
-🧠 Technologies Used
+ Technologies Used
 
 - Python
 - YOLO
@@ -53,7 +52,7 @@ Hazardous Area| Helmet, Vest, Gloves, Goggles
 - Computer Vision
 - Object Detection
 
-🔄 System Workflow
+ System Workflow
 
 Camera / Image / Video
           ↓
@@ -71,7 +70,7 @@ Camera / Image / Video
       ↓           ↓
   COMPLIANT     ALERT
 
-📂 Project Structure
+ Project Structure
 
 AI-Safety-Gear-Detection/
 │
@@ -88,7 +87,7 @@ AI-Safety-Gear-Detection/
 │
 └── screenshots/
 
-🚀 How It Works
+ How It Works
 
 1. The system receives an image, video, or live camera feed.
 2. YOLO detects the available safety equipment.
@@ -97,7 +96,7 @@ AI-Safety-Gear-Detection/
 5. The system displays the safety status.
 6. If required PPE is missing, the system can generate an alert.
 
-🔮 Future Scope
+ Future Scope
 
 - Integration with Raspberry Pi or other edge devices
 - IP camera integration
@@ -108,10 +107,10 @@ AI-Safety-Gear-Detection/
 - Multiple-camera support
 - Advanced alert and notification systems
 
-👩‍💻 Project Purpose
+ Project Purpose
 
 This project demonstrates how Artificial Intelligence and Computer Vision can be applied to improve workplace safety and support preventive safety monitoring in industrial environments.
 
-📜 Note
+ Note
 
 This project is developed as an academic/prototype project for demonstrating AI-based PPE detection and safety compliance monitoring.
