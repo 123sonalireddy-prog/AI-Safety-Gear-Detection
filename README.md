@@ -1,23 +1,28 @@
-AI Safety Gear Detection System
+AI Safety Gear & Fire Detection System
 
  Project Overview
 
-The AI Safety Gear Detection System is an AI-based workplace safety monitoring project designed to detect whether workers are wearing the required Personal Protective Equipment (PPE).
+The AI Safety Gear & Fire Detection System is an AI-based workplace safety monitoring prototype designed to improve safety in industrial environments.
 
-The system uses Python, YOLO, and OpenCV to detect safety equipment such as helmets, safety vests, gloves, and goggles from images or a live camera feed.
+The system uses Python, YOLO, and OpenCV to detect required Personal Protective Equipment (PPE), such as helmets, safety vests, gloves, and goggles, and to identify fire-related hazards through camera-based monitoring.
 
-The main objective is to improve workplace safety by identifying missing safety gear and providing an immediate compliance status.
+The system checks PPE compliance according to different working areas and helps identify unsafe conditions at an early stage.
 
-Problem Statement
+ Problem Statement
 
-In industrial environments, workers are required to wear appropriate safety equipment. Manual monitoring of PPE compliance can be difficult, time-consuming, and may not detect violations immediately.
+In industrial environments, workers are required to follow specific safety rules and wear appropriate protective equipment. Manual monitoring can be difficult and may not identify unsafe situations immediately.
 
-This project provides an automated approach to monitor PPE compliance using computer vision and object detection.
- Proposed Solution
+Fire and other hazardous conditions can also create serious risks if they are not detected quickly.
 
-The system captures an image or video frame through a camera and uses a YOLO-based object detection model to identify safety equipment.
+This project provides an automated computer-vision-based approach for PPE compliance monitoring and fire hazard detection.
 
-The detected PPE is then checked according to the requirements of the working area. The system determines whether the worker is compliant or whether any required safety gear is missing.
+Proposed Solution
+
+The system receives images, videos, or live camera frames and uses a YOLO-based object detection model to identify safety equipment and fire-related hazards.
+
+The detected PPE is compared with the safety requirements of the selected working area. The system then determines whether the worker is compliant or whether required safety equipment is missing.
+
+If a fire-related hazard is detected, the system can indicate the situation as unsafe and generate an alert mechanism.
 
  Main Features
 
@@ -26,15 +31,15 @@ The detected PPE is then checked according to the requirements of the working ar
 - Glove detection
 - Goggle detection
 - PPE compliance checking
-- Live camera-based detection
-- Image/video-based detection
-- Area-specific safety requirements
-- Compliance status display
-- Alert mechanism for missing safety equipment
+- Area-based safety requirements
+- Hazardous area monitoring
+- Fire detection
+- Live camera-based monitoring
+- Image and video-based detection
+- Safety status display
+- Alert mechanism for unsafe conditions
 
  Area-Based PPE Requirements
-
-The system can apply different PPE requirements depending on the working area.
 
 Working Area| Required PPE
 General Area| Helmet, Vest
@@ -42,7 +47,7 @@ Maintenance Area| Helmet, Vest, Gloves
 Hot Rolling Area| Helmet, Vest, Gloves, Goggles
 Hazardous Area| Helmet, Vest, Gloves, Goggles
 
- Technologies Used
+Technologies Used
 
 - Python
 - YOLO
@@ -52,65 +57,44 @@ Hazardous Area| Helmet, Vest, Gloves, Goggles
 - Computer Vision
 - Object Detection
 
- System Workflow
+System Workflow
 
 Camera / Image / Video
-          ↓
-     Frame Capture
-          ↓
-     YOLO Detection
-          ↓
-    PPE Identification
-          ↓
-   Compliance Checking
-          ↓
- Required PPE Present?
-       ↙        ↘
-     YES         NO
-      ↓           ↓
-  COMPLIANT     ALERT
+↓
+Frame Capture
+↓
+YOLO Object Detection
+↓
+PPE & Fire Detection
+↓
+Safety Compliance Checking
+↓
+Safety Status / Alert
 
- Project Structure
-
-AI-Safety-Gear-Detection/
-│
-├── main.py
-├── config.py
-├── compliance.py
-├── decision.py
-├── siren.py
-├── requirements.txt
-├── README.md
-│
-├── models/
-│   └── model.pt
-│
-└── screenshots/
-
- How It Works
+How It Works
 
 1. The system receives an image, video, or live camera feed.
-2. YOLO detects the available safety equipment.
-3. The detected PPE is compared with the required PPE for the selected area.
+2. YOLO detects PPE and fire-related objects.
+3. The detected PPE is compared with the required PPE for the selected working area.
 4. The compliance module checks whether all required equipment is present.
 5. The system displays the safety status.
-6. If required PPE is missing, the system can generate an alert.
+6. If required PPE is missing or a fire hazard is detected, the system indicates an unsafe condition.
 
  Future Scope
 
-- Integration with Raspberry Pi or other edge devices
+- Raspberry Pi or edge-device integration
 - IP camera integration
 - Real-time industrial monitoring
 - Improved detection accuracy
 - Automatic incident logging
-- Cloud-based monitoring dashboard
-- Multiple-camera support
-- Advanced alert and notification systems
+- Multiple-camera monitoring
+- Advanced alert and notification system
+- Cloud-based safety monitoring
 
  Project Purpose
 
-This project demonstrates how Artificial Intelligence and Computer Vision can be applied to improve workplace safety and support preventive safety monitoring in industrial environments.
+This project demonstrates how Artificial Intelligence and Computer Vision can be used for preventive workplace safety monitoring by combining PPE compliance detection and fire hazard detection in a single system.
 
  Note
 
-This project is developed as an academic/prototype project for demonstrating AI-based PPE detection and safety compliance monitoring.
+This project is developed as an academic prototype to demonstrate AI-based safety gear detection, workplace safety compliance monitoring, and fire hazard detection.
