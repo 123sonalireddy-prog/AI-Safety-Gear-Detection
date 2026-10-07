@@ -1,0 +1,4 @@
+import winsound
+
+def alert():
+    winsound.PlaySound("siren.wav", winsound.SND_FILENAME)
